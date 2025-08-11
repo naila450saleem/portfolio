@@ -27,7 +27,8 @@ const skills = [
 
 const Skills = () => {
   return (
-    <div className="flex flex-col items-center justify-center bg-white text-center px-16 lg:px-24 py-20">
+<div className="flex flex-col items-center justify-center bg-white text-center px-16 lg:px-24 pt-0 pb-20">
+
       
       <motion.h1
         className="text-4xl md:text-5xl font-bold text-green-600 mb-4"

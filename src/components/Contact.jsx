@@ -23,7 +23,7 @@ export default function Contact() {
   return (
     <div
       ref={ref}
-      className="min-h-screen flex flex-col items-center justify-start px-4 sm:px-6 pt-40 pb-20 bg-white text-center"
+      className="min-h-screen flex flex-col items-center justify-start px-4 sm:px-6 pt-8 pb-20 bg-white text-center"
       id="contact"
     >
       {/* Heading */}
