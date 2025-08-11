@@ -32,7 +32,7 @@ export default function Services() {
         initial="hidden"
         animate="visible"
         transition={{ duration: 0.6, delay: 0.2 }}
-        className="text-black text-lg max-w-2xl mb-32"
+        className="text-black text-lg max-w-2xl mb-8"
       >
         I offer a wide range of professional services designed to enhance your productivity and online presence.
       </motion.p>
