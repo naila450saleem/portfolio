@@ -1,10 +1,8 @@
 import React, { useRef } from "react";
 import { motion, useInView } from "framer-motion";
-import { BiLogoGmail } from "react-icons/bi";
-import { BsGithub } from "react-icons/bs";
-import { IoLogoLinkedin, IoLogoTwitter } from "react-icons/io5";
 import { IoMdMail } from "react-icons/io";
 import { FaPhone } from "react-icons/fa6";
+import { IoLogoWhatsapp, IoLogoFacebook } from "react-icons/io5"; // ✅ WhatsApp & Facebook icons import
 
 const fadeInUp = {
   hidden: { opacity: 0, y: 40 },
@@ -73,11 +71,24 @@ export default function Contact() {
               placeholder="Email"
               required
             />
-            <input
-              className="border-2 px-5 py-3 border-black rounded placeholder:text-[#71717A] text-sm w-full"
-              type="text"
-              placeholder="Your website (If exists)"
-            />
+           <label className="block text-left text-sm font-medium text-gray-700 ">
+  Your Issue Related
+</label>
+<select
+  className="border-2 px-5 py-3 border-black rounded text-sm w-full 
+             focus:border-green-600 focus:ring-2 focus:ring-green-600"
+  required
+>
+  <option value="" disabled selected>
+    Select an option
+  </option>
+  <option value="excel">Excel</option>
+  <option value="google-sheets">Google Sheets</option>
+  <option value="power-bi">Power BI</option>
+  <option value="web-development">Web Development</option>
+</select>
+
+
             <textarea
               className="resize-none border-2 px-5 py-3 h-32 border-black placeholder:text-[#71717A] rounded text-sm w-full"
               placeholder="How can I help?*"
@@ -93,24 +104,37 @@ export default function Contact() {
                 Get In Touch
               </motion.button>
 
+              {/* ✅ Only WhatsApp & Facebook icons */}
               <div className="flex items-center justify-center gap-x-4">
-                {[BiLogoGmail, IoLogoLinkedin, IoLogoTwitter, BsGithub].map(
-                  (Icon, index) => (
-                    <motion.a
-                      key={index}
-                      href="#"
-                      className="bg-white p-2 lg:p-3 rounded border-2 border-black text-green-600 hover:text-black transition-colors duration-300"
-                      whileHover={{
-                        scale: 1.1,
-                        backgroundColor: "#16A34A",
-                        color: "#fff",
-                      }}
-                      whileTap={{ scale: 0.9 }}
-                    >
-                      <Icon className="w-5 h-5" />
-                    </motion.a>
-                  )
-                )}
+                <motion.a
+                  href="https://wa.me/c/923196593052"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="bg-white p-2 lg:p-3 rounded border-2 border-black text-green-600 hover:text-black transition-colors duration-300"
+                  whileHover={{
+                    scale: 1.1,
+                    backgroundColor: "#16A34A",
+                    color: "#fff",
+                  }}
+                  whileTap={{ scale: 0.9 }}
+                >
+                  <IoLogoWhatsapp className="w-5 h-5" />
+                </motion.a>
+
+                <motion.a
+                  href="https://www.facebook.com/share/14GTgvK4THw/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="bg-white p-2 lg:p-3 rounded border-2 border-black text-green-600 hover:text-black transition-colors duration-300"
+                  whileHover={{
+                    scale: 1.1,
+                    backgroundColor: "#1877F2", // FB Blue
+                    color: "#fff",
+                  }}
+                  whileTap={{ scale: 0.9 }}
+                >
+                  <IoLogoFacebook className="w-5 h-5" />
+                </motion.a>
               </div>
             </div>
           </form>
@@ -135,7 +159,7 @@ export default function Contact() {
             <motion.a
               whileHover={{ x: 5 }}
               className="flex items-center gap-3 group"
-              href="mailto:Youremail@gmail.com"
+              href="mailto:excelexpert978@gmail.com"
             >
               <span className="border-2 border-transparent group-hover:border-green-600 rounded-full p-2 transition-all">
                 <IoMdMail className="w-5 h-5" />
@@ -146,7 +170,7 @@ export default function Contact() {
             <motion.a
               whileHover={{ x: 5 }}
               className="flex items-center gap-3 group"
-              href="tel:1234567890"
+              href="tel:+923196593052"
             >
               <span className="border-2 border-transparent group-hover:border-green-600 rounded-full p-2 transition-all">
                 <FaPhone className="w-5 h-5" />

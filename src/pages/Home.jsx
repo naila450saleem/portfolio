@@ -1,8 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
-import { IoLogoLinkedin, IoLogoTwitter } from "react-icons/io5";
-import { BiLogoGmail } from "react-icons/bi";
-import { BsGithub } from "react-icons/bs";
+import { IoLogoFacebook, IoLogoWhatsapp } from "react-icons/io"; // ✅ only fb & whatsapp
 import { TypeAnimation } from "react-type-animation";
 
 // Import your hero image from src/assets
@@ -82,24 +80,32 @@ export default function Home() {
             </a>
           </div>
 
-          {/* Social Icons */}
+          {/* ✅ Only Facebook & WhatsApp Icons */}
           <motion.div
             className="flex items-center gap-x-4 sm:gap-x-5 mt-4 lg:mt-6"
             initial={{ opacity: 0, y: 10 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.8, duration: 1 }}
           >
-            {[BiLogoGmail, IoLogoLinkedin, IoLogoTwitter, BsGithub].map((Icon, index) => (
-              <motion.a
-                key={index}
-                href="#"
-                className="bg-white p-2 sm:p-3 rounded border-2 border-black text-green-600 hover:text-black transition-colors duration-300"
-                whileHover={{ scale: 1.1, backgroundColor: "#000", color: "#fff" }}
-                whileTap={{ scale: 0.9 }}
-              >
-                <Icon className="w-4 h-4 sm:w-5 sm:h-5" />
-              </motion.a>
-            ))}
+            <motion.a
+               href="https://www.facebook.com/share/14GTgvK4THw/"
+              target="_blank"
+              className="bg-white p-2 sm:p-3 rounded border-2 border-black text-green-600 hover:text-black transition-colors duration-300"
+              whileHover={{ scale: 1.1, backgroundColor: "#000", color: "#fff" }}
+              whileTap={{ scale: 0.9 }}
+            >
+              <IoLogoFacebook className="w-4 h-4 sm:w-5 sm:h-5" />
+            </motion.a>
+
+            <motion.a
+               href="https://wa.me/c/923196593052"
+              target="_blank"
+              className="bg-white p-2 sm:p-3 rounded border-2 border-black text-green-600 hover:text-black transition-colors duration-300"
+              whileHover={{ scale: 1.1, backgroundColor: "#000", color: "#fff" }}
+              whileTap={{ scale: 0.9 }}
+            >
+              <IoLogoWhatsapp className="w-4 h-4 sm:w-5 sm:h-5" />
+            </motion.a>
           </motion.div>
         </motion.div>
 
