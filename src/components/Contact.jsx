@@ -71,23 +71,22 @@ export default function Contact() {
               placeholder="Email"
               required
             />
-           <label className="block text-left text-sm font-medium text-gray-700 ">
-  Your Issue Related
-</label>
-<select
-  className="border-2 px-5 py-3 border-black rounded text-sm w-full 
-             focus:border-green-600 focus:ring-2 focus:ring-green-600"
-  required
->
-  <option value="" disabled selected>
-    Select an option
-  </option>
-  <option value="excel">Excel</option>
-  <option value="google-sheets">Google Sheets</option>
-  <option value="power-bi">Power BI</option>
-  <option value="web-development">Web Development</option>
-</select>
-
+            <label className="block text-left text-sm font-medium text-gray-700 ">
+              Your Issue Related
+            </label>
+            <select
+              className="border-2 px-5 py-3 border-black rounded text-sm w-full 
+                         focus:border-green-600 focus:ring-2 focus:ring-green-600"
+              required
+            >
+              <option value="" disabled selected>
+                Select an option
+              </option>
+              <option value="excel">Excel</option>
+              <option value="google-sheets">Google Sheets</option>
+              <option value="power-bi">Power BI</option>
+              <option value="web-development">Web Development</option>
+            </select>
 
             <textarea
               className="resize-none border-2 px-5 py-3 h-32 border-black placeholder:text-[#71717A] rounded text-sm w-full"
@@ -104,10 +103,11 @@ export default function Contact() {
                 Get In Touch
               </motion.button>
 
-              {/* ✅ Only WhatsApp & Facebook icons */}
+              {/* ✅ WhatsApp, Facebook, Email icons */}
               <div className="flex items-center justify-center gap-x-4">
+                {/* WhatsApp */}
                 <motion.a
-                  href="https://wa.me/c/923196593052"
+                  href="https://wa.me/message/QO6TOQCCVS62G1"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="bg-white p-2 lg:p-3 rounded border-2 border-black text-green-600 hover:text-black transition-colors duration-300"
@@ -121,6 +121,7 @@ export default function Contact() {
                   <IoLogoWhatsapp className="w-5 h-5" />
                 </motion.a>
 
+                {/* Facebook */}
                 <motion.a
                   href="https://www.facebook.com/share/14GTgvK4THw/"
                   target="_blank"
@@ -134,6 +135,22 @@ export default function Contact() {
                   whileTap={{ scale: 0.9 }}
                 >
                   <IoLogoFacebook className="w-5 h-5" />
+                </motion.a>
+
+                {/* Mail */}
+                <motion.a
+                  href="mailto:excelexpert978@gmail.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="bg-white p-2 lg:p-3 rounded border-2 border-black text-green-600 hover:text-black transition-colors duration-300"
+                  whileHover={{
+                    scale: 1.1,
+                    backgroundColor: "#EA4335", // Gmail Red
+                    color: "#fff",
+                  }}
+                  whileTap={{ scale: 0.9 }}
+                >
+                  <IoMdMail className="w-5 h-5" />
                 </motion.a>
               </div>
             </div>
